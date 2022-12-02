@@ -1,41 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&family=Roboto+Mono:wght@400&display=swap');
+* { margin: 0px; padding: 0px; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
 
-* { margin: 0px; padding: 0px; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: #f9fafe; }
+main { max-width: 730px; background-color: #fff; margin: 70px auto; border-radius: 10px; padding: 30px; box-shadow: 0px 0px 20px #dddddd70; }
+.head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 35px; }
+.head h1 { position: relative; line-height: 24px; }
+.head span { position: absolute; padding: 0px 10px; background-color: #0a337a; color: #fff; border-radius: 5px; font-size: 16px; right: -40px; font-family: 'Roboto Mono', monospace; }
+.head a { cursor: pointer; color: hsl(219, 12%, 42%); font-size: 16px; text-decoration: none; }
+.head a:hover { color: hsl(219, 85%, 26%); }
 
-main { max-width: 1200px; margin: auto; text-align: center; padding: 50px; color: #4f5265; }
-main > h1 { font-weight: 200; margin: 30px 0px 20px; font-size: 34px; }
-p { font-weight: 400; color: #aaa; }
-.line-break { display: block; }
+ul li { display: flex; list-style-type: none; padding: 18px; border-radius: 8px; margin-bottom: 8px; }
+ul li:last-child { margin-bottom: 0px; }
+ul li.active { background-color: #f6fafd; }
+ul li .user-info > p:first-child { display: inline; }
+ul li.active .user-info > p:first-child::after { content: ''; width: 8px; height: 8px; background-color: hsl(1, 90%, 64%); border-radius: 50%; display: inline-block; margin: 0px 0px 1px 5px; }
+ul li img { max-width: 45px; }
+.user-info { padding-left: 18px; flex-grow: 1; }
+.user-info p:nth-child(2) { color: hsl(219, 14%, 63%); }
+.user-info p { color: hsl(219, 12%, 42%); }
+.user-info b:hover { cursor: pointer; color: hsl(219, 85%, 26%); }
+.bold-dark-blue { color: hsl(224, 21%, 14%); padding-right: 5px; }
+.bold-blue { color: hsl(219, 85%, 26%); }
+.inner-text { padding: 15px 20px; border-radius: 8px; border: 1px solid #ddd; margin: 8px 0px; }
+.inner-text:hover { cursor: pointer; background-color: #e5eff9; border-color: #e5eff9; }
+.user-info-img:hover { cursor: pointer; outline: 2px solid #e5eff9; border-radius: 7px; }
 
-.card-wrap { text-align: left; display: flex; gap: 30px; align-items: center; margin: 70px 0px 0px; }
-.card-wrap > .card:first-child { border-top: 4px solid hsl(180, 62%, 55%); }
-.card-wrap > .card:last-child { border-top: 4px solid hsl(212, 86%, 64%); }
-.card { width: 32%; padding: 30px; border-radius: 5px 5px 8px 8px; box-shadow: 0px 10px 20px #4051b536; }
-.card p { font-size: 14px; margin: 10px 0px; }
-.card-mid { width: 32%; }
-.card-mid .card { width: 100%; }
-.card-mid .card:first-child { border-top: 4px solid hsl(0, 78%, 62%); }
-.card-mid .card:last-child { border-top: 4px solid hsl(34, 97%, 64%); }
-.card-mid .card:first-child { margin-bottom: 30px; }
-
-.card img { display: block; margin: 30px 0 0 auto; }
-
-@media (max-width: 768px){
-    main { padding: 30px; }
-    main > h1 { margin: 20px 0px 10px; font-size: 28px; }
-    .card-wrap { gap: 25px; margin: 50px 0px 0px; }
-    .card { padding: 25px; }
-    .card-mid .card:first-child { margin-bottom: 25px; }
-    .card img { margin: 25px 0 0 auto; }
-}
-
-@media (max-width: 667px){
-    .card-wrap { display: block; }
-    .card , .card-mid { width: 100%; margin-bottom: 25px; }
-    .line-break { display: inline; }
+@media (max-width: 730px){
+    main { margin: 0px; }
+    .head h1 { font-size: 20px; line-height: 20px; }
+    .head a , .user-info p { font-size: 15px; }
+    ul li img { max-width: 40px; }
 }
 
 @media (max-width: 375px){
-    main > h1 { font-size: 22px; }
-    main > p { font-size: 15px; }
+    main { padding: 25px 15px 15px; }
+    .head { margin-bottom: 25px; }
+    ul li { padding: 12px; }
+    .user-info { padding-left: 12px; }
+    .bold-dark-blue { padding-right: 2px; }
+    .padding-left { padding-left: 2px; }
+    .margin-left { margin-left: 12px; }
 }

@@ -4,44 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Four card feature section</title>
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
 <body>
   <main>
-    <h1>Reliable, efficient delivery <br> <b>Powered by Technology</b></h1>
+    <section class="head">
+      <h1>Notifications <span id="not-count">3</span></h1>
+      <a class="mark-read">Mark all as read</a>
+    </section>
+    
+    <ul>
 
-    <p>Our Artificial Intelligence powered tools use millions of project data <span class="line-break">points to ensure that your project is successful</span></p>
-
-    <div class="card-wrap">
-      <div class="card">
-        <h3>Supervisor</h3>
-        <p>Monitors activity to identify project roadblocks</p>
-        <img src="./images/icon-supervisor.svg" alt="icon-supervisor">   
-      </div>
-
-      <div class="card-mid">
-        <div class="card">
-          <h3>Team Builder</h3>
-          <p>Scans our talent network to create the optimal team for your project</p>      
-          <img src="./images/icon-team-builder.svg" alt="icon-team-builder">
+      <li class="active">
+        <div class="user-icon"><img src="./assets/images/avatar-mark-webber.webp" alt="avatar-mark-webber"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Mark Webber</b> reacted to your recent post <b class="padding-left">My first tournament today!</b></p>
+          <p>1m ago</p>
         </div>
-  
-        <div class="card">
-          <h3>Karma</h3>
-          <p>Regularly evaluates our talent to ensure quality</p>
-          <img src="./images/icon-karma.svg" alt="icon-karma"> 
+      </li>
+      
+      <li class="active">
+        <div class="user-icon"><img src="./assets/images/avatar-angela-gray.webp" alt="avatar-angela-gray"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Angela Gray</b> followed you</p>
+          <p>5m ago</p>
         </div>
-      </div>
+      </li>
+      
+      <li class="active">
+        <div class="user-icon"><img src="./assets/images/avatar-jacob-thompson.webp" alt="avatar-jacob-thompson"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Jacob Thompson</b> has joined your group <b class="bold-blue padding-left">Chess Club</b></p>
+          <p>1 day ago</p>
+        </div>
+      </li>
+      
+      <li>
+        <div class="user-icon"><img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="avatar-rizky-hasanuddin"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Rizky Hasanuddin</b> sent you a private message</p>
+          <p>5 days ago</p>
+          <div class="inner-text">
+            <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+              I'm already having lots of fun and improving my game.</p>
+          </div>
+        </div>
+      </li>
+      
+      <li>
+        <div class="user-icon"><img src="./assets/images/avatar-kimberly-smith.webp" alt="avatar-kimberly-smith"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Kimberly Smith</b> commented on your picture</p>
+          <p>1 week ago</p>
+        </div>
+        <div class="margin-left">
+          <img class="user-info-img" src="./assets/images/image-chess.webp" alt="image-chess">
+        </div>
+      </li>
+      
+      <li>
+        <div class="user-icon"><img src="./assets/images/avatar-nathan-peterson.webp" alt="avatar-nathan-peterson"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Nathan Peterson</b> reacted to your recent post <b class="padding-left">5 end-game strategies to increase your win rate</b></p>
+          <p>2 weeks ago</p>
+        </div>
+      </li>
+      
+      <li>
+        <div class="user-icon"><img src="./assets/images/avatar-anna-kim.webp" alt="avatar-anna-kim"></div>
+        <div class="user-info">
+          <p><b class="bold-dark-blue">Anna Kim</b> left the group <b class="bold-blue padding-left">Chess Club</b></p>
+          <p>2 weeks ago</p>
+        </div>
+      </li>
 
-      <div class="card">
-        <h3>Calculator</h3>
-        <p>Uses data from past projects to provide better delivery estimates</p>
-        <img src="./images/icon-calculator.svg" alt="icon-calculator">
-      </div>
-    </div>
+    </ul>
   </main>
-  
+  <script src="./script.js"></script>
 </body>
 </html>
